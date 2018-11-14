@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wbw.echoblog.dao.PoemsDao">
+   
+    <resultMap id="PoemsMap" type="poems">
+        <result column="p_title" property="title" jdbcType="VARCHAR"/>
+        <result column="p_content" property="content" jdbcType="VARCHAR"/>
+        <result column="id" property="id" jdbcType="INTEGER"/>
+    </resultMap>
+    
+    <select id="getPoems" resultMap="PoemsMap">
+        select * from poem;   
+    </select>
+
+</mapper>

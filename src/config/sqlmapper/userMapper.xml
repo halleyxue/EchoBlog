@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wbw.echoblog.dao.UserDao">
+   
+    <resultMap id="UserMap" type="connUser">
+        <result column="u_name" property="username" jdbcType="VARCHAR"/>
+        <result column="u_pwd" property="password" jdbcType="VARCHAR"/>
+        <result column="id" property="id" jdbcType="INTEGER"/>
+    </resultMap>
+    
+    <select id="checkUser" parameterType="connUser" resultMap="UserMap">
+        select * from user_info where u_name=#{username} and u_pwd=#{password}     
+    </select>
+
+</mapper>
