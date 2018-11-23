@@ -6,6 +6,7 @@ import org.apache.ibatis.type.Alias;
 public class Poems {
 	private String title;
 	private String content;
+	private String remark;
 	private int id;
 	
 	public String getTitle() {
@@ -25,6 +26,13 @@ public class Poems {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
 	}
 
 }

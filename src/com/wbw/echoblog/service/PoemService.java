@@ -17,4 +17,9 @@ public class PoemService implements PoemsDao{
 		return poemsDao.getPoems();
 	}
 
+	public void addPoem(Poems itemPoem) {
+		poemsDao.addPoem(itemPoem);	
+		
+	}
+
 }

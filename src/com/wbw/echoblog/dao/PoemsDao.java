@@ -8,4 +8,6 @@ public interface PoemsDao {
 
 	public List<Poems> getPoems();
 
+	public void addPoem(Poems itemPoem);
+
 }

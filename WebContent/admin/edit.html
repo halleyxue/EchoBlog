@@ -1,27 +1,109 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+
+<meta charset="utf-8">
+<title>Projects - THOMSOON - Portfolio with grid and modern
+	simplicity style - download now!</title>
+
+<!--Style-->
+
+<link rel="stylesheet" href="../css/skel-noscript.css">
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/edit.css">
-<script src="../js/jquery.min.js"></script>
-<script src="../css/bootstrap.min.css"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/style-responsive.css">
 
 </head>
+
 <body>
-	<div class="text-intro">
-		<h1>王小二的诗</h1>
-		<div class="field">
-			<input type="text" name="filename" id="filename" placeholder="title……">
-		</div>
-		<div class="field">
-			<textarea name="content" rows="16" placeholder="Type your content here..."></textarea>
-		</div>
-		<div class="field">
-			<button type="submit">上传</button>
-			<div id="messages"></div>
-		</div>
+	<!--Header-->
+	<div id="headerpage"></div>
+
+	<div class="wrapper wrapper-style">
+		<article class="contact">
+			<div class="row">
+				<div class="12u">
+					<form action="#">
+						<div>
+							<div class="row half">
+								<div class="12u">
+									<input type="text" name="title" id="title" placeholder="Title" />
+								</div>
+							</div>
+							<div class="row half">
+								<div class="12u">
+									<textarea name="poem" id="poem" placeholder="Content"></textarea>
+								</div>
+							</div>
+							<div class="row half">
+								<div class="12u">
+									<input type="text" name="remark" id="remark"
+										placeholder="Remark" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<a href="#" class="button form-button-submit"
+										onclick='upload()'>上传</a> <a href="#"
+										class="button button-alt form-button-reset onclick='clear()'">清空</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</article>
 	</div>
+
 </body>
+
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+	$("document").ready(function() {
+		$("#headerpage").load("common.html");
+	})
+	function upload() {
+		var title = $("#title").val();
+		var poem = $("#poem").val();
+		var remark = $("#remark").val();
+		if(title == null){
+			alert("请输入题目");
+		}
+		if(poem == null){
+			alert("请输入内容");
+		}
+		var content = {
+			"title" : title,
+			"poem" : poem,
+			"remark" : remark
+		};
+		var json = {
+			"jsonStr" : JSON.stringify(content)
+		};
+		$.post("../admin/uploadPoems.do", json, function(data) {
+			if (data == "success") {
+				$("#title").val("");
+				$("#poem").val("");
+				$("#remark").val("");
+			}
+			alert("上传成功！")
+		}).fail(function(xhr, statusText, error) {
+			alert(statusText + " " + error);
+		});
+	}
+
+	function clear() {
+		$("#title").val("");
+		$("#poem").val("");
+		$("#remark").val("");
+	}
+</script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.waitforimages.js" type="text/javascript"></script>
+<script src="../js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="../js/jquery.jkit.1.2.16.min.js"></script>
+<script src="../js/main.js" type="text/javascript"></script>
 </html>
