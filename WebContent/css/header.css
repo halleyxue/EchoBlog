@@ -1,144 +1,97 @@
 @CHARSET "UTF-8";
-header.boxed{
-  position:fixed;
-  width:100%;
-  margin:0 auto;
-  height:80px;
-  z-index:9999;
-  background:none;
-  top:0;
-    -webkit-transition: background 0.2s ease-in;
+
+header.boxed {
+	position: fixed;
+	width: 100%;
+	margin: 0 auto;
+	height: 80px;
+	z-index: 999;
+	background: none;
+	top: 0;
+	-webkit-transition: background 0.2s ease-in;
 	-moz-transition: background 0.2s ease-in;
 	-ms-transition: background 0.2s ease-in;
 	-o-transition: background 0.2s ease-in;
-	transition: background 0.2s ease-in; 
+	transition: background 0.2s ease-in;
 }
 
-header.boxed .header-margin{
-  width:1140px;
-  margin:0 auto;
+header.boxed .header-margin {
+	width: 1140px;
+	margin: 0 auto;
 }
 
-header.boxed .header-margin-mini{
-  width:90%;
-  margin:0 auto;
-} 
-
-/* ul.social-icon{
-  float:right;
+header.boxed .header-margin-mini {
+	width: 90%;
+	margin: 0 auto;
 }
 
-ul.social-icon a{
-  float:right;
-  font-size:15px;
-  border-bottom:0;
-  color:black;
-  padding-right:0px !important;
+header a {
+	color: #000000;
+	text-decoration: none;
 }
 
-ul.social-icon a:hover{
-  color:#c3c3c3;
+ul.header-nav {
+	width: 60%;
+	float: left;
 }
 
-.menu-index{
-  position: fixed;
-  right: 5%;
-  top: 30px;
-  z-index: 99999;
-  padding:20px;
-  background:black;
-  cursor:pointer;
+header .logo>a {
+	font-size: 23px;
+	font-weight: 800;
+	float: left;
+	line-height: 80px;
+	padding-right: 40px;
+	border-bottom: 1px solid #f1f1f1;
 }
 
-
-.menu-index i{
-  float:right;
-  font-size:18px;
-  color:white;
-  padding-right:0px !important;
+header .logo>a:hover {
+	color: #c3c3c3;
 }
 
-.menu-index i:hover{
-  color:#c3c3c3;
+header li {
+	text-transform: uppercase;
+	list-style-type: none;
+	margin: 0 auto;
+	float: left;
 }
 
-
-ul.menu-icon{
-  float:right;
+header li>a {
+	font-size: 15px;
+	color: #c3c3c3;
+	padding-right: 25px;
+	padding-left: 25px;
+	font-weight: 800;
+	line-height: 80px;
+	display: inline-block;
+	border-bottom: 0;
+	text-decoration: none;
 }
 
-ul.menu-icon a{
-  float:right;
-  font-size:19px;
-  color:white;
-  padding-right:0px !important;
+header li>a:hover {
+	color: #000000;
 }
 
-ul.menu-icon i{
-  padding:20px;
-  background:black;
+header li>a #active {
+	color: #000000;
 }
 
-ul.menu-icon a:hover{
-  color:#c3c3c3;
-} */
-
-header a{
-  color:#000000;
+header li ul {
+	overflow: hidden;
+	display: none;
+	background: #f9f9f9;
+	z-index: 20;
 }
 
-ul.header-nav{
-  width:60%;
-  float:left;
+header li ul li a {
+	line-height: 50px;
+	padding-left: 30px;
+	width: 260px;
+	text-decoration: none;
 }
 
-header .logo > a{
-  font-size:23px;
-  font-weight:800;
-  float:left;
-  line-height:80px;
-  padding-right:40px;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-header .logo > a:hover{
-  color:#c3c3c3;
-}
-
-header li{
-  text-transform:uppercase;
-  list-style-type: none; margin: 0 auto; float: left;
-}
-
-header li > a{
-  font-size:15px;
-  color:#c3c3c3;
-  padding-right:25px;
-  padding-left:25px;
-  font-weight:800;
-  line-height:80px;
-  display:inline-block;  
-  border-bottom:0;
-}
-
-header li > a:hover{
-  color:#000000;
-}
-
-header li > a #active{
-  color:#000000;
-}
-
-header li ul{
-  overflow: hidden; display: none; background: #f9f9f9; z-index:20;
-}
-
-header li ul li a{
-  line-height:50px;
-  padding-left:30px; 
-  width:260px;
-}
-
-header li:hover ul{
-  position: absolute; padding: 0; display: block; width: 260px;
+header li:hover ul {
+	position: absolute;
+	padding: 0;
+	display: block;
+	width: 260px;
 }

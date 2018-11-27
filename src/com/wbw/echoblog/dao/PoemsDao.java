@@ -10,4 +10,6 @@ public interface PoemsDao {
 
 	public void addPoem(Poems itemPoem);
 
+	public List<String> getCatalog();
+
 }

@@ -15,8 +15,13 @@
 		select * from poem;
 	</select>
 
+	<select id="getCatalog" resultType="String">
+		select p_title from poem;
+	</select>
+
 	<insert id="addPoem" parameterType="poems">
-		insert into poem(p_title,p_content,p_remark)
+		insert into
+		poem(p_title,p_content,p_remark)
 		values (#{title},#{content},#{remark})
 	</insert>
 

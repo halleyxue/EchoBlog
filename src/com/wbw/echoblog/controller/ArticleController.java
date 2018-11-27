@@ -42,4 +42,12 @@ public class ArticleController extends BaseController{
 		poemService.addPoem(itemPoem);
 		return SUCCESS;
 	}
+
+	@RequestMapping(value = "/getCatalog", method = RequestMethod.POST)
+	public String getCatalog() throws Exception {
+		List<String> catalogList = poemService.getCatalog();
+		String catalog = JSON.toJSONString(catalogList);
+		System.out.println(catalog);
+		return catalog;	
+	}
 }
