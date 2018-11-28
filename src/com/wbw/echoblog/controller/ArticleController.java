@@ -47,7 +47,15 @@ public class ArticleController extends BaseController{
 	public String getCatalog() throws Exception {
 		List<String> catalogList = poemService.getCatalog();
 		String catalog = JSON.toJSONString(catalogList);
-		System.out.println(catalog);
 		return catalog;	
+	}
+	
+	@RequestMapping(value = "/getPoemByName", method = RequestMethod.POST)
+	public String getPoemByName(@RequestParam(JSONSTR) String json) throws Exception {
+		JSONObject jsonObject = JSON.parseObject(json);
+		String name = jsonObject.getString("name");
+		Poems poem = poemService.getPoemByName(name);
+		System.out.println(poem.getTitle());
+		return JSON.toJSONString(poem);	
 	}
 }

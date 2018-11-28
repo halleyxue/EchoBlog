@@ -246,7 +246,7 @@ CONTENT
 **************************
 */
 
-.hero-image{
+/* .hero-image{
   position:relative; 
   width:100%; 
   top:0; 
@@ -257,7 +257,7 @@ CONTENT
   -o-background-size: cover;
   background-size: cover;  
   
-}
+} */
 
 .one-column{
   width:40%;
@@ -419,6 +419,29 @@ li.grid-item{
   letter-spacing:1px;
   font-weight:900;
   line-height:10px;
+}
+
+.grid-hover h2{
+  font-size:23px;
+  bottom:80px;
+  left:40px;
+  position:absolute;
+  text-transform:uppercase;
+  color:#000000;
+  letter-spacing:1px;
+  font-weight:900;
+  line-height:50px;
+}
+
+.grid-hover p{
+  font-size:13px;
+  bottom:40px;
+  left:40px;
+  position:absolute;
+  color:#686868;
+  letter-spacing:1px;
+  font-weight:400;
+  line-height:50px;
 }
 
 

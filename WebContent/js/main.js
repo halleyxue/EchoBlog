@@ -70,7 +70,7 @@ $(function() {
 	}
 	
 	function addPoems(poems){
-		for(var i in poems){
+		for(var i = 0; i < poems.length; i++){
 			var temp = "";
 			var title = "<h1>" + poems[i]["title"] + "</h1>"
 			var content = poems[i]["content"];

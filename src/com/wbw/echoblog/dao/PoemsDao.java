@@ -12,4 +12,6 @@ public interface PoemsDao {
 
 	public List<String> getCatalog();
 
+	public Poems getPoemByName(String name);
+
 }

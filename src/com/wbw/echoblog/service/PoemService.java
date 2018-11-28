@@ -26,4 +26,8 @@ public class PoemService implements PoemsDao{
 		return poemsDao.getCatalog();
 	}
 
+	public Poems getPoemByName(String name) {
+		return poemsDao.getPoemByName(name);
+	}
+
 }

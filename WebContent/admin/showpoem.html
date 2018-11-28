@@ -9,44 +9,60 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/style-responsive.css">
 <link href="../css/all.min.css" rel="stylesheet" type="text/css">
+<!-- <link href="../css/clean-blog.min.css" rel="stylesheet">
+ -->
 </head>
 
 <body id="page-top">
 
 	<!--Header-->
-    <div id="headerpage"></div>
+	<div id="headerpage"></div>
 
 	<!-- Navigation -->
 	<a class="menu-toggle rounded" href="#"> <i class="fas fa-bars"></i>
 	</a>
 	<nav id="sidebar-wrapper">
 		<ul class="sidebar-nav">
-			<!-- <li class="sidebar-brand"><a class="js-scroll-trigger"
-				href="#page-top">Start Bootstrap</a></li>
-			<li class="sidebar-nav-item"><a class="js-scroll-trigger"
-				href="#page-top">Home</a></li>
-			<li class="sidebar-nav-item"><a class="js-scroll-trigger"
-				href="#about">About</a></li>
-			<li class="sidebar-nav-item"><a class="js-scroll-trigger"
-				href="#services">Services</a></li>
-			<li class="sidebar-nav-item"><a class="js-scroll-trigger"
-				href="#portfolio">Portfolio</a></li>
-			<li class="sidebar-nav-item"><a class="js-scroll-trigger"
-				href="#contact">Contact</a></li> -->
 		</ul>
 	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="poem-preview">
+				<div class="poem" href="poem.html">
+				    <h2 class="poem-title"></h2> 
+				</div>
+				<div class="poem-content">
+		<!-- 		    <p>Many say exploration is part of our</p>
+					<p>destiny, but it’s actually our duty to future generations.</p> -->
+				</div>
+ 				 <p class="poem-meta"></p>
+ 				 <br/>
+  			</div>
+		</div>
+		<hr>
+	</div>
 
 	<!-- Bootstrap core JavaScript -->
 	<script src="../js/jquery.min.js"></script>
 
 	<!-- Custom scripts for this template -->
 	<script src="../js/stylish-portfolio.min.js"></script>
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 		$("document").ready(function() {
 			$("#headerpage").load("common.html");
+			loadPoems();
 		})
 		
-		
-	</script>
+		function loadPoems() {
+		$.poem("../admin/getPoems.do", function(data) {
+			var array = JSON.parse(data.toString());
+			addPoems(array);
+		}).fail(function(xhr, statusText, error) {
+			alert(statusText + " " + error);
+		});
+
+	}
+	</script> -->
 </body>
 </html>
