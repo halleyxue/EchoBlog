@@ -4,7 +4,7 @@ body{
   font-family: 'Raleway', sans-serif;
   font-size:14px;
   font-weight: 400;
-  overflow-y:scroll;
+  overflow-y:hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -298,7 +298,7 @@ CONTENT
 }
 
 .content .text-poem{
-  width: 1140px;
+   width: 100%; 
   margin-top:50px;
   margin: 50px auto 0;
 }
